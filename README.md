@@ -1,1 +1,1 @@
-Zend Framefork Application on Docker witch Nginx, PHP and MySQL
+Zend Framework Application on Docker witch Nginx, PHP and MySQL
