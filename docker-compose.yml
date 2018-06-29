@@ -13,3 +13,20 @@ services:
     - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
     volumes_from:
     - php
+  php:
+    build: ./docker/php/
+    expose:
+    - 9000
+    volumes:
+    - .:/var/www/html
+  mysql:
+    image: mysql:latest
+    expose:
+    - 3306
+    volumes:
+    - database_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: zf3dnmp
+      MYSQL_USER: noroot
+      MYSQL_PASSWORD: password
